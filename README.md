@@ -47,8 +47,7 @@ Healthy:
 ```
 
 If there are no errors over Y time period, feature-branch is
-merged into master. If there are conflicts someone is alerted.
-And
+merged into master (if there are conflicts someone is alerted).
 
 ```
 $ woven status
@@ -67,10 +66,10 @@ Healthy:
     Strand 1 - master (25%)
     Strand 2 - master (25%)
     Strand 3 - master (25%)
-    Strand 5 - master (25%)
+    Strand 4 - master (25%)
 
 Unhealthy:
-    Strand 4 - feature-branch (0%)
+    Strand aef173 - feature-branch (0%)
         Added on 4/09/2016 at 12:28pm
         Removed on 4/10/2016 at 05:28pm
         - 10% increase in CPU
@@ -85,22 +84,28 @@ You have some code to deploy. `woven deploy`:
 - pushes your feature branch to a git server we host
 - pick up that change
 - tell traffic shaper to remove one app instance from the public traffic
-    - split traffice between remaining
+- split traffice between remaining instances
 - deploy feature branch to that instance
 - tell traffic shaper to start pushing traffic to feature-branch deploy
 - over a configurable period, start monitoring logs, events etc.
 - remove from traffic and report if errors, cpu problems, etc
 - shift traffic till it is balanced
-- after another configurable period, merge to master if OK
-- send reports along the way
+- merge to master if stable and OK after configurable length: time or # of requests?)
 
+## Alerts
+
+Integrate with pingdom/pagerduty/etc
+Send SMS, email?
 
 ### Initialization
 
 ```
 $ woven init project-name
-Creating woven.yml for you.
-Push your code to git@woven.io/project-name and we'll take care of the rest.
+Creating woven.yml for you. Push your code to
+
+    git@woven.io/project-name
+
+and we'll take care of the rest.
 ```
 
 ```
@@ -140,7 +145,3 @@ Build Breaks:
 - [ ] A warning is logged
 - [ ] An exception is thrown
 - [ ] I am alerted by email that my strand has broken
-
-FUTURE:
-- [ ]
-
