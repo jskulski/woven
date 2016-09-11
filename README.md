@@ -1,5 +1,11 @@
 # Woven
 
+An Application Developers Dream Deployment UI
+
+Please leave thoughts, critiques, etc in [Issues](https://github.com/jskulski/woven/issues). 
+
+**The best critique is that this is already built and I can just use it!!**
+
 ## Usage
 
 ### Deploying
