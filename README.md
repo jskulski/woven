@@ -1,10 +1,8 @@
 # Woven
 
-An Application Developers Dream Deployment UI
+An Application Developers Dream Deployment UI Request
 
 Please leave thoughts, critiques, etc in [Issues](https://github.com/jskulski/woven/issues). 
-
-**The best critique is that this is already built and I can just use it!!**
 
 ## Usage
 
@@ -135,19 +133,3 @@ strands:
     time_to_merge: 7 days
 ```
 
-
-
-## Roadmap to 1.0.0
-
-General:
-- [X] Write README.md
-- [ ] I can deploy a git branch to Aptible and it receives traffic
-- [ ] I can deploy a git branch to Aptible and it receives no traffic
-- [ ] Traffic shifts back to balanced on new deployed container
-- [ ] Branch is merged to master
-
-Build Breaks:
-- [ ] An errror is logged
-- [ ] A warning is logged
-- [ ] An exception is thrown
-- [ ] I am alerted by email that my strand has broken
